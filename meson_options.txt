@@ -1,0 +1,12 @@
+option(
+  'logs',
+  description: 'Show logs (requests/events with arguments)',
+  type: 'boolean',
+  value: false,
+)
+option(
+  'scanner',
+  description: 'Install scanner',
+  type: 'boolean',
+  value: true,
+)
