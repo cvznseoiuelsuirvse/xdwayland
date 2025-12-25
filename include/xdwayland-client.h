@@ -19,9 +19,9 @@ XDWL_MUST_CHECK int xdwl_dispatch(xdwl_proxy *proxy);
 struct xdwl_object *xdwl_object_get_by_id(xdwl_proxy *proxy, xdwl_id object_id);
 struct xdwl_object *xdwl_object_get_by_name(xdwl_proxy *proxy,
                                             const char *object_name);
-XDWL_MUST_CHECK uint32_t xdwl_object_register(xdwl_proxy *proxy,
-                                              xdwl_id object_id,
-                                              const char *object_name);
+XDWL_MUST_CHECK xdwl_id xdwl_object_register(xdwl_proxy *proxy,
+                                             xdwl_id object_id,
+                                             const char *object_name);
 XDWL_MUST_CHECK int xdwl_object_unregister(xdwl_proxy *proxy,
                                            xdwl_id object_id);
 XDWL_MUST_CHECK int xdwl_object_unregister_last(xdwl_proxy *proxy,
@@ -29,6 +29,5 @@ XDWL_MUST_CHECK int xdwl_object_unregister_last(xdwl_proxy *proxy,
 
 void xdwl_interface_register(const struct xdwl_interface *interface);
 void xdwl_error_print();
-int xdwl_destroy_listener(xdwl_id object_id);
 
 #endif

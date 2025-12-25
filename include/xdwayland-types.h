@@ -35,7 +35,11 @@ typedef union xdwl_arg {
 
 typedef struct xdwl_proxy {
   int sockfd;
-  xdwl_map *obj_reg;
+  xdwl_map *object_registry;
+  struct xdwl_bitmap *client_id_pool;
+  struct xdwl_bitmap *server_id_pool;
+  xdwl_map *event_listeners;
+  uint32_t seq;
 } xdwl_proxy;
 
 typedef struct xdwl_object {
