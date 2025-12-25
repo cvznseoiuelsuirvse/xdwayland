@@ -294,7 +294,6 @@ def generate(input: str, output_path_base: str) -> None:
 
     c.write(
         f"""#include "xdwayland-client.h"
-#include "xdwayland-core.h"
 
 """
     )

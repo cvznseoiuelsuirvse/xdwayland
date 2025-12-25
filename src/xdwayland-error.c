@@ -13,7 +13,7 @@ void xdwl_error_set(enum xdwl_errors errcode, const char *errmsg, ...) {
 }
 
 void xdwl_error_print() {
-  if (xdwl_errcode >= 0) {
+  if (xdwl_errcode > 0) {
     fprintf(stderr, "%s\n", xdwl_errmsg);
     xdwl_errcode = 0;
   }
