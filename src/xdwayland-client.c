@@ -496,7 +496,7 @@ static ssize_t xdwl_sock_recv(xdwl_proxy *proxy, char *buffer, int *fd) {
 static int xdwl_recv_events(xdwl_proxy *proxy, char *buffer,
                             struct xdwl_raw_message *message, int *offset,
                             int *received) {
-  int fd;
+  int fd = 0;
 
   if (*received == 0) {
     *received = xdwl_sock_recv(proxy, buffer, &fd);

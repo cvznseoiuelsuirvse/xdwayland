@@ -4,11 +4,11 @@
 #include "xdwayland-types.h"
 #include <stdio.h>
 
-#define xdwl_list_for_each(pos, head, member)                                  \
-  for (pos = (head); pos->next && ((member = pos->data), 1); pos = pos->next)
+#define xdwl_list_for_each(pos, member)                             \
+  for (; pos->next && ((member = pos->data), 1); pos = pos->next) 	\
 
-#define xdwl_map_for_each(m, p)                                                \
-  for (size_t __i = 0; __i < (m)->size; __i++)                                 \
+#define xdwl_map_for_each(m, p)                                     \
+  for (size_t __i = 0; __i < (m)->size; __i++)                      \
     for ((p) = (m)->pairs[__i]; (p) != NULL; (p) = (p)->next)
 
 xdwl_map *xdwl_map_new(size_t size);

@@ -1,4 +1,10 @@
-project('xdwayland', 'c')
+project(
+  'xdwayland',
+  'c',
+  default_options: [
+    'optimization=3',
+  ],
+)
 
 if get_option('logs')
   add_project_arguments('-DLOGS', language: 'c')
